@@ -5,13 +5,13 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>41cbcd0e-2983-4c7d-bc08-7afe31365ba3</ProjectGuid>
+    <ProjectGuid>3d7b840d-b736-4446-94db-23b8a0b9d7d4</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>FSharp.Serialization</RootNamespace>
-    <AssemblyName>FSharp.Serialization</AssemblyName>
+    <RootNamespace>FSharp.Serialization.Test</RootNamespace>
+    <AssemblyName>FSharp.Serialization.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFSharpCoreVersion>4.3.1.0</TargetFSharpCoreVersion>
-    <Name>FSharp.Serialization</Name>
+    <Name>FSharp.Serialization.Test</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Debug\FSharp.Serialization.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\FSharp.Serialization.Test.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,7 +30,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Release\FSharp.Serialization.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\FSharp.Serialization.Test.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
@@ -42,9 +42,19 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProvidedTypes.fs" />
-    <Compile Include="SerializationProvider.fs" />
-    <None Include="Script.fsx" />
+    <ProjectReference Include="..\FSharp.Serialization\FSharp.Serialization.fsproj">
+      <Name>FSharp.Serialization</Name>
+      <Project>{41cbcd0e-2983-4c7d-bc08-7afe31365ba3}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SampleLib\SampleLib.fsproj">
+      <Name>SampleLib</Name>
+      <Project>{46b01fbd-b0da-4e99-bb49-63c674c48843}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

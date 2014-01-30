@@ -7,6 +7,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.Serialization", "FSh
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SampleLib", "SampleLib\SampleLib.fsproj", "{46B01FBD-B0DA-4E99-BB49-63C674C48843}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.Serialization.Test", "FSharp.Serialization.Test\FSharp.Serialization.Test.fsproj", "{3D7B840D-B736-4446-94DB-23B8A0B9D7D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{46B01FBD-B0DA-4E99-BB49-63C674C48843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46B01FBD-B0DA-4E99-BB49-63C674C48843}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46B01FBD-B0DA-4E99-BB49-63C674C48843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D7B840D-B736-4446-94DB-23B8A0B9D7D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D7B840D-B736-4446-94DB-23B8A0B9D7D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D7B840D-B736-4446-94DB-23B8A0B9D7D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D7B840D-B736-4446-94DB-23B8A0B9D7D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
