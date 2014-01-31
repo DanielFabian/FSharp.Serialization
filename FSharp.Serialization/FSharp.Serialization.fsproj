@@ -33,6 +33,9 @@
     <DocumentationFile>bin\Release\FSharp.Serialization.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FSharp.Compiler.Service">
+      <HintPath>..\..\..\incube\vontobel\dev\packages\FSharp.Compiler.Service.0.0.11-alpha\lib\net40\FSharp.Compiler.Service.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
@@ -43,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ProvidedTypes.fs" />
-    <Compile Include="SerializationProvider.fs" />
+    <Compile Include="Reflection.fs" />
     <None Include="Script.fsx" />
   </ItemGroup>
   <PropertyGroup>
